@@ -169,7 +169,7 @@ function Home() {
                 {/* Background Image */}
                 <div
                   className="absolute inset-0 bg-cover bg-center"
-                  style={{ backgroundImage: 'url(/assets/passenger-ship.png)' }}
+                  style={{ backgroundImage: 'url(/assets/passenger-ship.webp)' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-950/40 to-slate-950/60" />
 
@@ -212,7 +212,7 @@ function Home() {
                 {/* Background Image */}
                 <div
                   className="absolute inset-0 bg-cover bg-center"
-                  style={{ backgroundImage: 'url(/assets/cargo-ship.png)' }}
+                  style={{ backgroundImage: 'url(/assets/cargo-ship.webp)' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-950/40 to-slate-950/60" />
 
@@ -267,7 +267,7 @@ function Home() {
                 <div className="relative w-full max-w-md mx-auto aspect-square">
                   <div className="absolute inset-0 rounded-full overflow-hidden bg-slate-800">
                     <img
-                      src="/assets/who-we-are.png"
+                      src="/assets/who-we-are.webp"
                       alt="Who We Are"
                       className="w-full h-full object-cover"
                     />
@@ -387,7 +387,7 @@ function Home() {
             className="max-w-4xl mx-auto"
           >
             <img
-              src="/assets/yemen-ports.png"
+              src="/assets/yemen-ports.webp"
               alt="Yemen map with ports"
               className="w-full h-auto"
             />
@@ -400,7 +400,7 @@ function Home() {
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-fixed"
-          style={{ backgroundImage: 'url(/assets/huge-background.png)' }}
+          style={{ backgroundImage: 'url(/assets/huge-background.webp)' }}
         />
         {/* Dark Overlay for readability */}
         <div className="absolute inset-0 bg-slate-950/85"></div>
@@ -460,7 +460,7 @@ function Home() {
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-fixed"
-          style={{ backgroundImage: 'url(/assets/huge-background.png)' }}
+          style={{ backgroundImage: 'url(/assets/huge-background.webp)' }}
         />
         {/* Dark Overlay for readability */}
         <div className="absolute inset-0 bg-slate-950/85"></div>
@@ -509,7 +509,7 @@ function Home() {
             {/* Background Image */}
             <div
               className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: 'url(/assets/huge-background.png)' }}
+              style={{ backgroundImage: 'url(/assets/huge-background.webp)' }}
             />
             {/* Dark Overlay */}
             <div className="absolute inset-0 bg-slate-950/90"></div>
@@ -532,7 +532,7 @@ function Home() {
             {/* Background Image */}
             <div
               className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: 'url(/assets/huge-background.png)' }}
+              style={{ backgroundImage: 'url(/assets/huge-background.webp)' }}
             />
             {/* Subtle Gray Overlay */}
             <div className="absolute inset-0 bg-slate-700/80"></div>

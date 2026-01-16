@@ -298,7 +298,7 @@ function About() {
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-fixed"
-          style={{ backgroundImage: 'url(/assets/huge-background.png)' }}
+          style={{ backgroundImage: 'url(/assets/huge-background.webp)' }}
         />
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-slate-950/90"></div>

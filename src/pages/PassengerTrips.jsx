@@ -11,38 +11,38 @@ function PassengerTrips() {
   const { t } = useLanguage()
   // Gallery images - add your 12 image filenames here
   const galleryImages = [
-    '/assets/gallery-1.png',
-    '/assets/gallery-2.png',
-    '/assets/gallery-3.png',
-    '/assets/gallery-4.png',
-    '/assets/gallery-5.png',
-    '/assets/gallery-6.png',
-    '/assets/gallery-7.png',
-    '/assets/gallery-8.png',
-    '/assets/gallery-9.png',
-    '/assets/gallery-10.png',
-    '/assets/gallery-11.png',
-    '/assets/gallery-12.png',
-    '/assets/gallery-13.png',
-    '/assets/gallery-14.png',
-    '/assets/gallery-15.png',
-    '/assets/gallery-16.png',
-    '/assets/gallery-17.png',
-    '/assets/gallery-18.png',
-    '/assets/gallery-19.png',
-    '/assets/gallery-20.png',
-    '/assets/gallery-21.png',
-    '/assets/gallery-22.png',
-    '/assets/gallery-23.png',
-    '/assets/gallery-24.png',
-    '/assets/gallery-25.png',
-    '/assets/gallery-26.png',
-    '/assets/gallery-27.png',
-    '/assets/gallery-28.png',
-    '/assets/gallery-29.png',
-    '/assets/gallery-30.png',
-    '/assets/gallery-31.png',
-    '/assets/gallery-32.png',
+    '/assets/gallery-1.webp',
+    '/assets/gallery-2.webp',
+    '/assets/gallery-3.webp',
+    '/assets/gallery-4.webp',
+    '/assets/gallery-5.webp',
+    '/assets/gallery-6.webp',
+    '/assets/gallery-7.webp',
+    '/assets/gallery-8.webp',
+    '/assets/gallery-9.webp',
+    '/assets/gallery-10.webp',
+    '/assets/gallery-11.webp',
+    '/assets/gallery-12.webp',
+    '/assets/gallery-13.webp',
+    '/assets/gallery-14.webp',
+    '/assets/gallery-15.webp',
+    '/assets/gallery-16.webp',
+    '/assets/gallery-17.webp',
+    '/assets/gallery-18.webp',
+    '/assets/gallery-19.webp',
+    '/assets/gallery-20.webp',
+    '/assets/gallery-21.webp',
+    '/assets/gallery-22.webp',
+    '/assets/gallery-23.webp',
+    '/assets/gallery-24.webp',
+    '/assets/gallery-25.webp',
+    '/assets/gallery-26.webp',
+    '/assets/gallery-27.webp',
+    '/assets/gallery-28.webp',
+    '/assets/gallery-29.webp',
+    '/assets/gallery-30.webp',
+    '/assets/gallery-31.webp',
+    '/assets/gallery-32.webp',
   ]
 
   const [selectedImage, setSelectedImage] = useState(null)
@@ -86,7 +86,7 @@ function PassengerTrips() {
         <Navbar />
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(/assets/passenger-ship.png)' }}
+          style={{ backgroundImage: 'url(/assets/passenger-ship.webp)' }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/70 to-slate-950/90" />
 
@@ -250,7 +250,7 @@ function PassengerTrips() {
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-fixed"
-          style={{ backgroundImage: 'url(/assets/passenger-background.png)' }}
+          style={{ backgroundImage: 'url(/assets/passenger-background.webp)' }}
         />
         {/* Dark Overlay for readability */}
         <div className="absolute inset-0 bg-slate-950/85"></div>

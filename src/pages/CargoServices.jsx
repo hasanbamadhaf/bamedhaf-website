@@ -13,23 +13,23 @@ function CargoServices() {
 
   // Gallery images - 17 slots
   const galleryImages = [
-    '/assets/cargo-gallery-1.png',
-    '/assets/cargo-gallery-2.png',
-    '/assets/cargo-gallery-3.png',
-    '/assets/cargo-gallery-4.png',
-    '/assets/cargo-gallery-5.png',
-    '/assets/cargo-gallery-6.png',
-    '/assets/cargo-gallery-7.png',
-    '/assets/cargo-gallery-8.png',
-    '/assets/cargo-gallery-9.png',
-    '/assets/cargo-gallery-10.png',
-    '/assets/cargo-gallery-11.png',
-    '/assets/cargo-gallery-12.png',
-    '/assets/cargo-gallery-13.png',
-    '/assets/cargo-gallery-14.png',
-    '/assets/cargo-gallery-15.png',
-    '/assets/cargo-gallery-16.png',
-    '/assets/cargo-gallery-17.png',
+    '/assets/cargo-gallery-1.webp',
+    '/assets/cargo-gallery-2.webp',
+    '/assets/cargo-gallery-3.webp',
+    '/assets/cargo-gallery-4.webp',
+    '/assets/cargo-gallery-5.webp',
+    '/assets/cargo-gallery-6.webp',
+    '/assets/cargo-gallery-7.webp',
+    '/assets/cargo-gallery-8.webp',
+    '/assets/cargo-gallery-9.webp',
+    '/assets/cargo-gallery-10.webp',
+    '/assets/cargo-gallery-11.webp',
+    '/assets/cargo-gallery-12.webp',
+    '/assets/cargo-gallery-13.webp',
+    '/assets/cargo-gallery-14.webp',
+    '/assets/cargo-gallery-15.webp',
+    '/assets/cargo-gallery-16.webp',
+    '/assets/cargo-gallery-17.webp',
   ]
 
   useEffect(() => {
@@ -57,7 +57,7 @@ function CargoServices() {
         t('cargo.service1.feature5'),
         t('cargo.service1.feature6')
       ],
-      image: "/assets/cargo1.png"
+      image: "/assets/cargo1.webp"
     },
     {
       icon: FaShip,
@@ -72,7 +72,7 @@ function CargoServices() {
         t('cargo.service2.feature5'),
         t('cargo.service2.feature6')
       ],
-      image: "/assets/cargo2.png"
+      image: "/assets/cargo2.webp"
     },
     {
       icon: FaClipboardCheck,
@@ -87,7 +87,7 @@ function CargoServices() {
         t('cargo.service3.feature5'),
         t('cargo.service3.feature6')
       ],
-      image: "/assets/cargo3.png"
+      image: "/assets/cargo3.webp"
     },
     {
       icon: FaTruck,
@@ -102,7 +102,7 @@ function CargoServices() {
         t('cargo.service4.feature5'),
         t('cargo.service4.feature6')
       ],
-      image: "/assets/cargo4.png"
+      image: "/assets/cargo4.webp"
     },
     {
       icon: FaWarehouse,
@@ -117,7 +117,7 @@ function CargoServices() {
         t('cargo.service5.feature5'),
         t('cargo.service5.feature6')
       ],
-      image: "/assets/cargo5.png"
+      image: "/assets/cargo5.webp"
     },
     {
       icon: FaBox,
@@ -132,7 +132,7 @@ function CargoServices() {
         t('cargo.service6.feature5'),
         t('cargo.service6.feature6')
       ],
-      image: "/assets/cargo6.png"
+      image: "/assets/cargo6.webp"
     }
   ]
 
@@ -153,7 +153,7 @@ function CargoServices() {
         {/* Background Image with Overlay */}
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(/assets/cargo-ship.png)' }}
+          style={{ backgroundImage: 'url(/assets/cargo-ship.webp)' }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/70 to-slate-950/90" />
 
@@ -217,7 +217,7 @@ function CargoServices() {
                         alt={service.title}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         onError={(e) => {
-                          e.target.src = '/assets/cargo-ship.png'
+                          e.target.src = '/assets/cargo-ship.webp'
                         }}
                       />
                     </div>
@@ -360,7 +360,7 @@ function CargoServices() {
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-fixed"
-          style={{ backgroundImage: 'url(/assets/cargo-backimage.png)' }}
+          style={{ backgroundImage: 'url(/assets/cargo-backimage.webp)' }}
         />
         {/* Dark Overlay for readability */}
         <div className="absolute inset-0 bg-slate-950/85"></div>
@@ -397,7 +397,7 @@ function CargoServices() {
                     loading="lazy"
                     className="w-full h-auto max-h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
                     onError={(e) => {
-                      e.target.src = '/assets/cargo-ship.png'
+                      e.target.src = '/assets/cargo-ship.webp'
                     }}
                   />
                   <div className="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/20 transition-colors duration-300"></div>
