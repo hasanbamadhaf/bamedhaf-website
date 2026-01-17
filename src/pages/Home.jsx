@@ -234,7 +234,7 @@ function Home() {
                   >
                     {t('home.hero.cargo.subtitle')}
                   </motion.p>
-                  <Link to="/cargo-services">
+                  <Link to="/cargo">
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
