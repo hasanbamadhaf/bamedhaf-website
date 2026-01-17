@@ -33,7 +33,7 @@ const FAQItem = ({ question, answer, index }) => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      viewport={{ once: false }}
+      viewport={{ once: true }}
       className="bg-white rounded-lg overflow-hidden shadow-sm"
     >
       <button
@@ -234,15 +234,17 @@ function Home() {
                   >
                     {t('home.hero.cargo.subtitle')}
                   </motion.p>
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.8 }}
-                    className="inline-flex items-center gap-2 px-6 py-3 border-2 border-white text-white font-medium rounded-sm hover:bg-white hover:text-slate-950 transition-all"
-                  >
-                    <span>{t('home.hero.cargo.button')}</span>
-                    <FaArrowRight className="text-xs group-hover:translate-x-1 transition-transform" />
-                  </motion.div>
+                  <Link to="/cargo-services">
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8, delay: 0.8 }}
+                      className="inline-flex items-center gap-2 px-6 py-3 border-2 border-white text-white font-medium rounded-sm hover:bg-white hover:text-slate-950 transition-all cursor-pointer"
+                    >
+                      <span>{t('home.hero.cargo.button')}</span>
+                      <FaArrowRight className="text-xs group-hover:translate-x-1 transition-transform" />
+                    </motion.div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -259,7 +261,7 @@ function Home() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="relative"
             >
               <div className="relative">
@@ -285,7 +287,7 @@ function Home() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
             >
               <div className="inline-block px-4 py-2 bg-cyan-500/10 rounded-full mb-6">
                 <span className="text-sm font-medium text-cyan-400">{t('home.whoWeAre.badge')}</span>
@@ -311,7 +313,7 @@ function Home() {
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     className="flex items-start gap-3"
                   >
                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-cyan-400 flex items-center justify-center mt-0.5">
@@ -369,7 +371,7 @@ function Home() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="text-center mb-12 md:mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-light mb-2 text-slate-950">
@@ -383,7 +385,7 @@ function Home() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
             <img
@@ -395,21 +397,24 @@ function Home() {
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section className="py-20 md:py-32 relative overflow-hidden">
-        {/* Background Image */}
+      {/* COMBINED DARK SECTIONS - Single background image */}
+      <div className="relative bg-slate-950">
+        {/* Single Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-fixed"
+          className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(/assets/huge-background.webp)' }}
         />
-        {/* Dark Overlay for readability */}
+        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-slate-950/85"></div>
+
+      {/* SERVICES */}
+      <section className="py-20 md:py-32 relative overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 md:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="text-center mb-16 md:mb-20"
           >
             <h2 className="text-3xl md:text-5xl font-light mb-4 text-white">{t('home.why.title')}</h2>
@@ -439,7 +444,7 @@ function Home() {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="group text-center"
               >
                 <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center border border-white/20 rounded-sm group-hover:border-white/40 transition-colors">
@@ -457,19 +462,12 @@ function Home() {
 
       {/* STATS */}
       <section className="py-20 md:py-32 relative overflow-hidden">
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-fixed"
-          style={{ backgroundImage: 'url(/assets/huge-background.webp)' }}
-        />
-        {/* Dark Overlay for readability */}
-        <div className="absolute inset-0 bg-slate-950/85"></div>
         <div className="relative max-w-7xl mx-auto px-4 md:px-8">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12"
           >
             {[
@@ -483,7 +481,7 @@ function Home() {
                 initial={{ scale: 0.9, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="text-center group"
               >
                 <stat.icon className="text-3xl md:text-4xl text-white/40 mx-auto mb-4 group-hover:text-white/60 transition-colors" />
@@ -503,16 +501,11 @@ function Home() {
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: false, margin: "-100px" }}
+            viewport={{ once: true, margin: "-100px" }}
             className="relative py-16 md:py-20 px-6 md:px-10 flex flex-col items-center justify-center text-center"
           >
-            {/* Background Image */}
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: 'url(/assets/huge-background.webp)' }}
-            />
             {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-slate-950/90"></div>
+            <div className="absolute inset-0 bg-slate-950/50"></div>
             <div className="relative z-10">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-4">{t('home.vision.title')}</h2>
             <p className="text-sm md:text-base text-white/70 max-w-md leading-relaxed">
@@ -526,16 +519,11 @@ function Home() {
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: false, margin: "-100px" }}
+            viewport={{ once: true, margin: "-100px" }}
             className="relative py-16 md:py-20 px-6 md:px-10 flex flex-col items-center justify-center text-center"
           >
-            {/* Background Image */}
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: 'url(/assets/huge-background.webp)' }}
-            />
             {/* Subtle Gray Overlay */}
-            <div className="absolute inset-0 bg-slate-700/80"></div>
+            <div className="absolute inset-0 bg-slate-700/60"></div>
             <div className="relative z-10">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-4">{t('home.mission.title')}</h2>
             <p className="text-sm md:text-base text-white/80 max-w-md leading-relaxed">
@@ -545,6 +533,7 @@ function Home() {
           </motion.div>
         </div>
       </section>
+      </div>{/* End of COMBINED DARK SECTIONS */}
 
       {/* Wave Divider */}
       <div className="relative -mt-1">
@@ -605,7 +594,7 @@ function Home() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
             >
               <p className="text-xs font-semibold text-slate-950 uppercase tracking-widest mb-4">{t('home.faq.heading')}</p>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0f4c75] leading-tight">
@@ -618,7 +607,7 @@ function Home() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="space-y-6"
             >
               {[
@@ -649,7 +638,7 @@ function Home() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-5xl font-light mb-6 text-white">
               {t('home.cta.title')}
