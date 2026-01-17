@@ -154,7 +154,7 @@ function CargoServices() {
         <Navbar />
         {/* Background Image with Overlay */}
         <div
-          className="absolute inset-0 bg-cover bg-bottom md:bg-center"
+          className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(/assets/cargo-ship.webp)' }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/70 to-slate-950/90" />
@@ -294,7 +294,7 @@ function CargoServices() {
             <div className="w-16 h-px bg-slate-300 mx-auto"></div>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-3xl mx-auto">
             {[
               {
                 icon: '👤',

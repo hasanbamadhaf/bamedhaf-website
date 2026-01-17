@@ -86,7 +86,7 @@ function PassengerTrips() {
       <section className="relative h-screen overflow-hidden">
         <Navbar />
         <div
-          className="absolute inset-0 bg-cover bg-bottom md:bg-center"
+          className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(/assets/passenger-ship.webp)' }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/70 to-slate-950/90" />
