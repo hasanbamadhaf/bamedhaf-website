@@ -1,3 +1,5 @@
+// LanguageContext.jsx - Provides English/Arabic translations throughout the app
+
 import { createContext, useContext, useState } from 'react'
 
 const LanguageContext = createContext()

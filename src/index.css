@@ -44,3 +44,11 @@ body {
   overflow-x: hidden;
   position: relative;
 }
+
+/* Hide background images on mobile for performance */
+@media (max-width: 1023px) {
+  .desktop-bg-only {
+    background-image: none !important;
+    display: none !important;
+  }
+}

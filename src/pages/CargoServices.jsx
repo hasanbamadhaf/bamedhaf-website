@@ -1,7 +1,9 @@
+// CargoServices.jsx - Cargo and shipping services page with gallery
+
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
-import { FaArrowLeft, FaShip, FaBox, FaAnchor, FaTruck, FaWarehouse, FaClipboardCheck, FaGlobe, FaShieldAlt, FaClock, FaFileContract, FaWhatsapp, FaArrowUp } from 'react-icons/fa'
+import { FaShip, FaBox, FaAnchor, FaTruck, FaWarehouse, FaClipboardCheck, FaShieldAlt, FaWhatsapp, FaArrowUp } from 'react-icons/fa'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { useLanguage } from '../contexts/LanguageContext'
@@ -152,7 +154,7 @@ function CargoServices() {
         <Navbar />
         {/* Background Image with Overlay */}
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-bottom md:bg-center"
           style={{ backgroundImage: 'url(/assets/cargo-ship.webp)' }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/70 to-slate-950/90" />
@@ -186,7 +188,7 @@ function CargoServices() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="text-center mb-16 md:mb-20"
           >
             <h2 className="text-3xl md:text-5xl font-light mb-4 text-white">{t('cargo.services.heading')}</h2>
@@ -203,7 +205,7 @@ function CargoServices() {
                 initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className={`grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center ${
                   index % 2 === 1 ? 'lg:flex-row-reverse' : ''
                 }`}
@@ -231,7 +233,7 @@ function CargoServices() {
                     initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.7, delay: 0.3 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                   >
                     <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-4 leading-tight">
                       {service.title}
@@ -257,7 +259,7 @@ function CargoServices() {
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.4, delay: 0.4 + (idx * 0.05) }}
-                            viewport={{ once: false }}
+                            viewport={{ once: true }}
                             className="flex items-start gap-3 group/item"
                           >
                             <div className="flex-shrink-0 w-5 h-5 rounded-full bg-cyan-500/10 flex items-center justify-center mt-0.5 group-hover/item:bg-cyan-500/20 transition-colors">
@@ -285,7 +287,7 @@ function CargoServices() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="text-center mb-16 md:mb-20"
           >
             <h2 className="text-3xl md:text-5xl font-light mb-4 text-slate-950">{t('cargo.whoWeServe.title')}</h2>
@@ -310,7 +312,7 @@ function CargoServices() {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.15, duration: 0.6 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="text-center group"
               >
                 <div className="text-5xl mb-6 opacity-60 group-hover:opacity-100 transition-opacity">{client.icon}</div>
@@ -329,7 +331,7 @@ function CargoServices() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="text-center mb-16 md:mb-20"
           >
             <h2 className="text-3xl md:text-5xl font-light mb-4 text-white">{t('cargo.ports.title')}</h2>
@@ -344,7 +346,7 @@ function CargoServices() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.08, duration: 0.5 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="text-center group"
               >
                 <FaAnchor className="text-2xl text-white/40 mx-auto mb-3 group-hover:text-white/60 transition-colors" />
@@ -356,20 +358,20 @@ function CargoServices() {
       </section>
 
       {/* Cargo Gallery Section */}
-      <section className="pt-20 md:pt-32 pb-12 md:pb-16 relative overflow-hidden">
-        {/* Background Image */}
+      <section className="pt-20 md:pt-32 pb-12 md:pb-16 relative overflow-hidden bg-slate-950">
+        {/* Background Image - Desktop only */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-fixed"
+          className="desktop-bg-only absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(/assets/cargo-backimage.webp)' }}
         />
         {/* Dark Overlay for readability */}
-        <div className="absolute inset-0 bg-slate-950/85"></div>
+        <div className="desktop-bg-only absolute inset-0 bg-slate-950/85"></div>
         <div className="relative max-w-7xl mx-auto px-4 md:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="text-center mb-16 md:mb-20"
           >
             <h2 className="text-3xl md:text-5xl font-light mb-4 text-white">{t('cargo.gallery.title')}</h2>
@@ -385,7 +387,7 @@ function CargoServices() {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05, duration: 0.6 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="group cursor-pointer break-inside-avoid mb-6 md:mb-8"
                 onClick={() => setSelectedImage(image)}
               >
@@ -442,7 +444,7 @@ function CargoServices() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-5xl font-light mb-6 text-white">
               {t('cargo.cta.title')}

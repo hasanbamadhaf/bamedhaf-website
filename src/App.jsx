@@ -1,3 +1,5 @@
+// App.jsx - Main app component with routing setup
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { LanguageProvider } from './contexts/LanguageContext'
 import ScrollToTop from './components/ScrollToTop'

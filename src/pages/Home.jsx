@@ -1,3 +1,5 @@
+// Home.jsx - Main landing page with hero, services, stats, and FAQ sections
+
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
@@ -15,16 +17,9 @@ import {
 } from 'react-icons/fa'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import PortsMap from '../components/PortsMap'
 import { useLanguage } from '../contexts/LanguageContext'
 
-const fadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 40 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.7, delay },
-})
-
-// FAQ Accordion Item Component
+// FAQ Accordion Item - expandable question/answer component
 const FAQItem = ({ question, answer, index }) => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -67,42 +62,6 @@ const FAQItem = ({ question, answer, index }) => {
         )}
       </AnimatePresence>
     </motion.div>
-  )
-}
-
-// WaveText component for animated wavy text
-const WaveText = ({ text, className }) => {
-  const words = text.split(' ')
-
-  return (
-    <span className={className}>
-      {words.map((word, wordIndex) => (
-        <span key={wordIndex} className="inline-block mr-3">
-          {word.split('').map((char, charIndex) => (
-            <motion.span
-              key={charIndex}
-              className="inline-block"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{
-                opacity: 1,
-                y: [0, -10, 0],
-              }}
-              transition={{
-                opacity: { duration: 0.3, delay: (wordIndex * 0.2) + (charIndex * 0.05) },
-                y: {
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: (wordIndex * 0.2) + (charIndex * 0.05),
-                }
-              }}
-            >
-              {char}
-            </motion.span>
-          ))}
-        </span>
-      ))}
-    </span>
   )
 }
 

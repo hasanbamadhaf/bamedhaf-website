@@ -1,7 +1,9 @@
+// About.jsx - Company information, values, timeline, and office locations
+
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
-import { FaArrowLeft, FaHistory, FaEye, FaBullseye, FaHandshake, FaAward, FaCertificate, FaGlobe, FaArrowUp, FaShip, FaUsers, FaMapMarkerAlt, FaWhatsapp, FaPhone } from 'react-icons/fa'
+import { FaHandshake, FaAward, FaCertificate, FaGlobe, FaArrowUp, FaMapMarkerAlt, FaWhatsapp, FaPhone } from 'react-icons/fa'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import LightRays from '../components/LightRays'
@@ -140,7 +142,7 @@ function About() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-5xl font-light mb-8 text-white">{t('about.story.title')}</h2>
               <p className="text-white/70 text-base md:text-lg leading-relaxed mb-6">
@@ -155,7 +157,7 @@ function About() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="space-y-8"
             >
               <div className="p-6 md:p-8 bg-white/5 border-l-2 border-cyan-400">
@@ -211,7 +213,7 @@ function About() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="text-center mb-16 md:mb-20"
           >
             <h2 className="text-3xl md:text-5xl font-light mb-4 text-slate-950">{t('about.values.title')}</h2>
@@ -225,7 +227,7 @@ function About() {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="text-center group"
               >
                 <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center border border-slate-200 rounded-sm group-hover:border-slate-400 transition-colors">
@@ -246,7 +248,7 @@ function About() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="text-center mb-16 md:mb-20"
           >
             <h2 className="text-3xl md:text-5xl font-light mb-4 text-slate-950">{t('about.journey.title')}</h2>
@@ -255,7 +257,7 @@ function About() {
 
           <div className="relative">
             {/* Vertical Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-cyan-500 hidden md:block"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-cyan-500 hidden lg:block"></div>
 
             <div className="space-y-16 md:space-y-24">
               {milestones.map((milestone, index) => (
@@ -264,7 +266,7 @@ function About() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: false }}
+                  viewport={{ once: true }}
                   className="relative"
                 >
                   <div className={`grid md:grid-cols-2 gap-8 items-center ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`}>
@@ -277,14 +279,14 @@ function About() {
                     </div>
 
                     {/* Dot - Offset toward card side */}
-                    <div className={`hidden md:block absolute top-1/2 transform -translate-y-1/2 ${
+                    <div className={`hidden lg:block absolute top-1/2 transform -translate-y-1/2 ${
                       index % 2 === 0 ? 'right-1/2 translate-x-1/4' : 'left-1/2 -translate-x-1/4'
                     }`}>
                       <div className="w-6 h-6 bg-cyan-500 rounded-full border-4 border-white shadow-lg"></div>
                     </div>
 
                     {/* Empty space for alternating layout */}
-                    <div className={`hidden md:block ${index % 2 === 0 ? 'md:col-start-2' : 'md:col-start-1'}`}></div>
+                    <div className={`hidden lg:block ${index % 2 === 0 ? 'md:col-start-2' : 'md:col-start-1'}`}></div>
                   </div>
                 </motion.div>
               ))}
@@ -294,21 +296,21 @@ function About() {
       </section>
 
       {/* Regional Operations */}
-      <section className="py-20 md:py-32 relative overflow-hidden">
-        {/* Background Image */}
+      <section className="py-20 md:py-32 relative overflow-hidden bg-slate-950">
+        {/* Background Image - Desktop only */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-fixed"
+          className="desktop-bg-only absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(/assets/huge-background.webp)' }}
         />
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-slate-950/90"></div>
+        <div className="desktop-bg-only absolute inset-0 bg-slate-950/90"></div>
 
         <div className="relative max-w-7xl mx-auto px-4 md:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="text-center mb-16 md:mb-20"
           >
             <h2 className="text-3xl md:text-5xl font-light mb-4 text-white">{t('about.regional.title')}</h2>
@@ -321,7 +323,7 @@ function About() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="max-w-4xl mx-auto mb-16"
           >
             <div className="bg-gradient-to-br from-cyan-500/10 to-blue-600/10 backdrop-blur-sm border border-white/20 rounded-sm p-8 md:p-10">
@@ -370,7 +372,7 @@ function About() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="max-w-5xl mx-auto"
           >
             <div className="bg-slate-900/50 backdrop-blur-sm border border-white/10 rounded-sm p-8 md:p-10">
@@ -399,7 +401,7 @@ function About() {
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.05, duration: 0.4 }}
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                     className="flex items-center gap-2 text-sm md:text-base text-white/70"
                   >
                     <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full flex-shrink-0"></div>
@@ -425,7 +427,7 @@ function About() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-5xl font-light mb-6 text-white">
               {t('about.cta.title')}

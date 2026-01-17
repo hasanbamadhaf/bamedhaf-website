@@ -1,7 +1,9 @@
+// Navbar.jsx - Navigation bar with mobile menu and language switcher
+
 import { useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FaAnchor, FaBars, FaTimes, FaChevronDown } from 'react-icons/fa'
+import { FaBars, FaTimes } from 'react-icons/fa'
 import { useLanguage } from '../contexts/LanguageContext'
 
 function Navbar() {

@@ -1,3 +1,5 @@
+// LightRays.jsx - WebGL light rays effect for hero sections
+
 import { useRef, useEffect, useState } from 'react';
 import { Renderer, Program, Triangle, Mesh } from 'ogl';
 import './LightRays.css';

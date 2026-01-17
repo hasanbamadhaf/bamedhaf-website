@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom'
+// PassengerTrips.jsx - Passenger ferry travel page with masonry gallery
+
 import { motion, AnimatePresence } from 'framer-motion'
-import { FaArrowLeft, FaWhatsapp, FaPhone, FaArrowUp } from 'react-icons/fa'
+import { FaWhatsapp, FaPhone, FaArrowUp } from 'react-icons/fa'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Masonry from '../components/Masonry'
@@ -85,7 +86,7 @@ function PassengerTrips() {
       <section className="relative h-screen overflow-hidden">
         <Navbar />
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-bottom md:bg-center"
           style={{ backgroundImage: 'url(/assets/passenger-ship.webp)' }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/70 to-slate-950/90" />
@@ -118,7 +119,7 @@ function PassengerTrips() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="text-center mb-16 md:mb-20"
           >
             <h2 className="text-3xl md:text-5xl font-light mb-4 text-white">{t('passenger.included.title')}</h2>
@@ -137,7 +138,7 @@ function PassengerTrips() {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="text-center group"
               >
                 <div className="text-4xl mb-4 opacity-60 group-hover:opacity-100 transition-opacity">{item.icon}</div>
@@ -156,7 +157,7 @@ function PassengerTrips() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="text-center mb-16 md:mb-20"
           >
             <h2 className="text-3xl md:text-5xl font-light mb-4 text-slate-950">{t('passenger.requirements.title')}</h2>
@@ -190,7 +191,7 @@ function PassengerTrips() {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="group relative bg-slate-50 border border-slate-200 rounded-sm p-6 md:p-8 hover:border-slate-300 hover:-translate-y-1 transition-all duration-300"
               >
                 {/* Step number and divider */}
@@ -218,7 +219,7 @@ function PassengerTrips() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="flex flex-col md:flex-row items-center justify-between gap-6 rounded-sm border border-slate-200 bg-slate-50 p-6 md:p-8 max-w-6xl mx-auto"
           >
             <div className="text-center md:text-left">
@@ -246,20 +247,20 @@ function PassengerTrips() {
       </section>
 
       {/* Gallery Section - Card Style */}
-      <section className="pt-20 md:pt-32 pb-12 md:pb-16 relative overflow-hidden">
-        {/* Background Image */}
+      <section className="pt-20 md:pt-32 pb-12 md:pb-16 relative overflow-hidden bg-slate-950">
+        {/* Background Image - Desktop only */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-fixed"
+          className="desktop-bg-only absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(/assets/passenger-background.webp)' }}
         />
         {/* Dark Overlay for readability */}
-        <div className="absolute inset-0 bg-slate-950/85"></div>
+        <div className="desktop-bg-only absolute inset-0 bg-slate-950/85"></div>
         <div className="relative max-w-7xl mx-auto px-4 md:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="text-center mb-16 md:mb-20"
           >
             <h2 className="text-3xl md:text-5xl font-light mb-4 text-white">{t('passenger.gallery.title')}</h2>
@@ -310,7 +311,7 @@ function PassengerTrips() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-5xl font-light mb-6 text-white">
               {t('passenger.cta.title')}

@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+// Contact.jsx - Contact information, office details, and working hours
+
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import { FaEnvelope, FaPhone, FaWhatsapp, FaMapMarkerAlt, FaClock, FaArrowUp } from 'react-icons/fa'
@@ -132,7 +133,7 @@ function Contact() {
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
-                  viewport={{ once: false }}
+                  viewport={{ once: true }}
                   className="h-full"
                 >
                   <CardWrapper
@@ -163,7 +164,7 @@ function Contact() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             className="text-center max-w-2xl mx-auto border-t border-slate-200 pt-12"
           >
             <FaClock className="text-4xl text-slate-400 mx-auto mb-6" />
@@ -178,21 +179,21 @@ function Contact() {
       </section>
 
       {/* Our Office */}
-      <section className="py-20 md:py-32 relative overflow-hidden">
-        {/* Background Image */}
+      <section className="py-20 md:py-32 relative overflow-hidden bg-slate-950">
+        {/* Background Image - Desktop only */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-fixed"
+          className="desktop-bg-only absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(/assets/huge-background.webp)' }}
         />
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-slate-950/90"></div>
+        <div className="desktop-bg-only absolute inset-0 bg-slate-950/90"></div>
 
         <div className="relative max-w-4xl mx-auto px-4 md:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
           >
             <div className="bg-gradient-to-br from-cyan-500/10 to-blue-600/10 backdrop-blur-sm border border-white/20 rounded-sm p-8 md:p-10">
               <div className="flex items-start gap-3 mb-6">

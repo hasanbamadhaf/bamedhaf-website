@@ -1,3 +1,5 @@
+// Footer.jsx - Site footer with quick links and contact info
+
 import { Link } from 'react-router-dom'
 import { FaAnchor, FaPhone, FaWhatsapp, FaEnvelope } from 'react-icons/fa'
 import { useLanguage } from '../contexts/LanguageContext'

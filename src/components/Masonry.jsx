@@ -1,6 +1,7 @@
+// Masonry.jsx - Animated masonry grid layout for image galleries
+
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-
 import './Masonry.css';
 
 const useMedia = (queries, values, defaultValue) => {
