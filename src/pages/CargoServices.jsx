@@ -457,7 +457,7 @@ function CargoServices() {
               <motion.a
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                href="https://wa.me/967771111440"
+                href="https://wa.me/967770916002"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 px-8 py-3.5 bg-white text-slate-950 font-medium rounded-sm text-sm md:text-base tracking-wide hover:bg-white/90 transition-all"

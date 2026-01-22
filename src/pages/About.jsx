@@ -343,7 +343,7 @@ function About() {
               {/* Google Maps Embed */}
               <div className="mb-6 rounded-sm overflow-hidden border border-white/10">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.5!2d45.0286!3d12.7855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1631d4a1bc4c3c1d%3A0x8c5d5d5d5d5d5d5d!2sBamedhaf%20Shipping%20Agency!5e0!3m2!1sen!2s!4v1705000000000!5m2!1sen!2s"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3748.957822688588!2d45.008712974902494!3d12.790823487508149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3df5f76498df1bc7%3A0x44ace109b6a237ed!2sFuture%20leadership%20Center!5e1!3m2!1sen!2smy!4v1768578367186!5m2!1sen!2smy"
                   width="100%"
                   height="300"
                   style={{ border: 0 }}
@@ -361,7 +361,7 @@ function About() {
                 </div>
                 <div className="flex items-center gap-3 text-base text-white/70">
                   <FaWhatsapp className="text-cyan-400 text-xl" />
-                  <span>+967 771111440</span>
+                  <span>+967 770 916 002</span>
                 </div>
               </div>
             </div>
@@ -440,7 +440,7 @@ function About() {
               <motion.a
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                href="https://wa.me/967771111440"
+                href="https://wa.me/967770916002"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 px-8 py-3.5 bg-white text-slate-950 font-medium rounded-sm text-sm md:text-base tracking-wide hover:bg-white/90 transition-all"

@@ -28,14 +28,14 @@ function Contact() {
     {
       icon: FaPhone,
       titleKey: "contact.info.phone",
-      details: ["02245599", "+967 771111440"],
+      details: ["02245599", "+967 770 916 002"],
       link: "tel:02245599"
     },
     {
       icon: FaWhatsapp,
       titleKey: "contact.info.whatsapp",
-      details: ["+967 771111440"],
-      link: "https://wa.me/967771111440"
+      details: ["+967 770 916 002"],
+      link: "https://wa.me/967770916002"
     },
     {
       icon: FaEnvelope,
@@ -230,7 +230,7 @@ function Contact() {
                 </div>
                 <div className="flex items-center gap-3 text-base text-white/70">
                   <FaWhatsapp className="text-cyan-400 text-xl" />
-                  <span>+967 771111440</span>
+                  <span>+967 770 916 002</span>
                 </div>
               </div>
             </div>

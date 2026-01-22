@@ -52,7 +52,7 @@ function Footer() {
               </p>
               <p className="flex items-center gap-2">
                 <FaWhatsapp className="text-cyan-400" />
-                +967 771111440
+                +967 770 916 002
               </p>
               <p className="flex items-center gap-2">
                 <FaEnvelope className="text-cyan-400" />

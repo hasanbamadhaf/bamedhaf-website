@@ -94,7 +94,7 @@ const translations = {
     'home.faq.q2': 'Do you handle both cargo and passenger services?',
     'home.faq.a2': 'Yes, we offer both cargo shipping services and passenger travel services. Our cargo division handles sea freight forwarding, customs clearance, and inland transportation, while our passenger services provide safe maritime travel between Aden and Berbera.',
     'home.faq.q3': 'How can I book passenger tickets or cargo shipments?',
-    'home.faq.a3': 'You can contact us directly via WhatsApp at +967 771111440 or call our office at 02-245599. Our team will guide you through the booking process and provide all necessary information about schedules, rates, and requirements.',
+    'home.faq.a3': 'You can contact us directly via WhatsApp at +967 770 916 002 or call our office at 02-245599. Our team will guide you through the booking process and provide all necessary information about schedules, rates, and requirements.',
     // CTA Section
     'home.cta.title': 'Ready to Ship or Travel?',
     'home.cta.subtitle': 'Reach out to our team - we\'ll guide you through the next steps.',
@@ -480,7 +480,7 @@ const translations = {
     'home.faq.q2': 'هل تتعاملون مع خدمات الشحن والركاب؟',
     'home.faq.a2': 'نعم، نقدم خدمات شحن البضائع وخدمات سفر الركاب. قسم الشحن لدينا يتعامل مع الشحن البحري والتخليص الجمركي والنقل البري، بينما توفر خدمات الركاب لدينا سفرًا بحريًا آمنًا بين عدن وبربرة',
     'home.faq.q3': 'كيف يمكنني حجز تذاكر الركاب أو شحنات البضائع؟',
-    'home.faq.a3': 'يمكنك الاتصال بنا مباشرة عبر واتساب على الرقم 771111440 967+ أو الاتصال بمكتبنا على الرقم 02-245599. سيوجهك فريقنا خلال عملية الحجز ويقدم لك جميع المعلومات اللازمة حول المواعيد والأسعار والمتطلبات',
+    'home.faq.a3': 'يمكنك الاتصال بنا مباشرة عبر واتساب على الرقم 770 916 002 967+ أو الاتصال بمكتبنا على الرقم 02-245599. سيوجهك فريقنا خلال عملية الحجز ويقدم لك جميع المعلومات اللازمة حول المواعيد والأسعار والمتطلبات',
     // CTA Section
     'home.cta.title': 'هل أنت مستعد للشحن أو السفر؟',
     'home.cta.subtitle': 'تواصل مع فريقنا - سنوجهك خلال الخطوات التالية',
